@@ -191,6 +191,7 @@ void info(){
     printf("================================================================\n");
     printf("自定义加密算法\n");
     printf("作者：刘陈陈(RealGUO)\n");
+    printf("Github：https://github.com/RealGUOL/encryption\n");
     printf("描述：\n");
     printf("a. 使用维吉尼亚算法+列置换算法加密\n");
     printf("b. 加密时自动忽略密钥中包含的非字母符号\n");

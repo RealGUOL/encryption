@@ -34,15 +34,13 @@
    gcc -o main main.c -w -g
    ```
 
-3. 运行命令（linux）
+3. 运行命令
 
-   ```sh
-   ./main
-   ```
+   linux: `./main`
+   
+   windows： 直接双击`main.exe`文件
 
-   windows：直接双击文件`mian`
-
-
+   > 注：windows环境运行起来可能会有乱码问题
 
 
 
