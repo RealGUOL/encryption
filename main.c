@@ -164,8 +164,6 @@ void swap(char *a, char *b) {
 void encryption(char *secretkey, char *plaintext, char *ciphertext) {
     int order[255];
     int alpha_num = get_order(secretkey, order);
-
-    debug_order(order, alpha_num);
     
     // length align
     int len = strlen(plaintext);
@@ -175,12 +173,8 @@ void encryption(char *secretkey, char *plaintext, char *ciphertext) {
     }
     plaintext[len] = '\0';
 
-    // virginia
     virginia_encryption(secretkey, plaintext, ciphertext);
     swap(plaintext, ciphertext);
-
-// debug_info(secretkey, plaintext, ciphertext);
-    // column_permutation
     column_permutation_encryption(plaintext, ciphertext, order, alpha_num);
 }
 
@@ -188,17 +182,8 @@ void decryption(char *secretkey, char *plaintext, char *ciphertext) {
     int order[255];
     int alpha_num = get_order(secretkey, order);
 
-    debug_order(order, alpha_num);
-
-    debug_info(secretkey, plaintext, ciphertext);
-
-    // column_permutation
     column_permutation_decryption(plaintext, ciphertext, order, alpha_num);
-    
     swap(plaintext, ciphertext);
-
-// debug_info(secretkey, plaintext, ciphertext);
-    // virginia
     virginia_decryption(secretkey, plaintext, ciphertext);
 }
 
